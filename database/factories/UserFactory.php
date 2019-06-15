@@ -22,13 +22,9 @@ $factory->define(User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
         'password' => 'password', // password
+        'parent_id' =>0,
+        'deleted_at' =>0,
         
     ];
 });
-$factory->define(Usertype::class, function (Faker $faker) {
-    return [
-        'user_type' => $faker->name,
-        
-        
-    ];
-});
+
