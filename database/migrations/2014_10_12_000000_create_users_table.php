@@ -21,8 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('parent_id')->nullable();
             $table->integer('user_type_id')->nullable();
+            $table->rememberToken();
             $table->timestamps();
-            $table->time('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 
