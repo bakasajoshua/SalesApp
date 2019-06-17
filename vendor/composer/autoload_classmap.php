@@ -28,6 +28,8 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Team' => $baseDir . '/app/Team.php',
+    'App\\Team_member' => $baseDir . '/app/Team_member.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\Usertype' => $baseDir . '/app/Usertype.php',
     'BeyondCode\\DumpServer\\DumpServerCommand' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
