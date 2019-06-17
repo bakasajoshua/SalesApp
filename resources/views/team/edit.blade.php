@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Add Supervisor to your team') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('team/update') }}">
+                    <form method="POST" action="{{ url('team/'.$user->id) }}">
                         @csrf
 
                         <div class="form-group row">

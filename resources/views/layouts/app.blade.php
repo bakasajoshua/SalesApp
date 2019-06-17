@@ -32,17 +32,22 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    @auth
+                    
                     <ul class="navbar-nav mr-auto">
-                            @if (auth()->user()->user_type==1)
-                            <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('team/create') }}">{{ __('Create team') }}</a>
-                                </li>
-        
+                        @auth
+                        <li class="nav-item">
+                            @if (auth()->user()->user_type_id==1)
+                                <a class="nav-link" href="{{ url('team/create') }}">{{ __('Create team') }}</a>
                             @endif
+                            
+                        </li>
+                        @endauth
+                            
+        
+                            
                     </ul>
                         
-                    @endauth
+                    
                     
 
                     <!-- Right Side Of Navbar -->
