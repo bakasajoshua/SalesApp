@@ -402,6 +402,8 @@ class ComposerStaticInit784f25002adafea60842284cc774edf2
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Team' => __DIR__ . '/../..' . '/app/Team.php',
+        'App\\Team_member' => __DIR__ . '/../..' . '/app/Team_member.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\Usertype' => __DIR__ . '/../..' . '/app/Usertype.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
