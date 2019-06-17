@@ -35,8 +35,6 @@ class UsersTableSeeder extends Seeder
             
         ]);
 
-        factory(App\User::Class, 15)->create();
-
         factory(App\Usertype::Class, 1)->create([
         	'user_type' => 'Manager',
         ]);
