@@ -21,3 +21,5 @@ Route::get('profile', function () {
 })->middleware('verified');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('team', 'TeamController');
