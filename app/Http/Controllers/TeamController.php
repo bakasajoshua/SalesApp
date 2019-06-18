@@ -77,7 +77,8 @@ class TeamController extends Controller
     public function edit($id)
     {
         $user=User::find($id);
-        return view('team.edit')->with('user', $user);
+        $teams=Team::where('user_id', auth()->user()->id);
+        return view('team.edit')->with('user', $user)->with('teams', $teams);
     }
 
     /**

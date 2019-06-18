@@ -10,7 +10,20 @@
                 <div class="card-body">
                     <form method="POST" action="{{ url('team/'.$user->id) }}">
                         @csrf
+                        @if (auth()->user()->user_type_id==1)
+                            <div class="form-group row">
+                                <label for="team" class="col-md-4 col-form-label text-md-right">{{ __('Select Team') }}</label>
 
+                                <div class="col-md-6">
+                                        <select name="user_type_id">
+                                            <option value="">Select</option>
+                                            @foreach ($teams as $team)
+                                            <option value="2">{{$team->id}}</option>
+                                            @endforeach
+                                        </select>
+                                </div>
+                            </div>
+                        @endif
                         <div class="form-group row">
                             <label for="user_type_id" class="col-md-4 col-form-label text-md-right">{{ __('Change Usertype') }}</label>
 
