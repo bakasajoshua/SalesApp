@@ -35,12 +35,19 @@
                     
                     <ul class="navbar-nav mr-auto">
                         @auth
-                        <li class="nav-item">
-                            @if (auth()->user()->user_type_id==1)
-                                <a class="nav-link" href="{{ url('team/create') }}">{{ __('Create team') }}</a>
-                            @endif
-                            
+                        @if (auth()->user()->user_type_id==1)
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="{{ url('team/create') }}">{{ __('Create team') }}</a>   
                         </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="{{ url('team') }}">{{ __('Create New Member') }}</a>   
+                        </li>
+                        @endif
+                        @if (auth()->user()->user_type_id==2)
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="{{ url('team/'.$user->id.'/edit') }}">{{ __('Create New Member') }}</a>   
+                        </li>
+                        @endif
                         @endauth
                             
         

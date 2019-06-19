@@ -75,10 +75,11 @@ class TeamController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        $user=User::find($id);
-        $teams=Team::where('user_id', auth()->user()->id);
-        return view('team.edit')->with('user', $user)->with('teams', $teams);
+    {   $user=auth()->user();
+        $teams=$user->teams()->get();
+        // dd($teams);
+        // $teams=Team::
+        return view('team.edit', compact('user', 'teams'));
     }
 
     /**
