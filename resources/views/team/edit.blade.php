@@ -5,11 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                
                 <div class="card-header">{{ __('Add Supervisor to your team') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ url('team/'.$user->id) }}">
                         @csrf
+                        
                         @if (auth()->user()->user_type_id==1)
                             <div class="form-group row">
                                 <label for="team" class="col-md-4 col-form-label text-md-right">{{ __('Select Team') }}</label>
@@ -18,7 +20,7 @@
                                         <select name="user_type_id">
                                             <option value="">Select</option>
                                             @foreach ($teams as $team)
-                                            <option value="2">{{$team->id}}</option>
+                                                <option value="2">{{$team->name}}</option>
                                             @endforeach
                                         </select>
                                 </div>
