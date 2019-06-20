@@ -95,11 +95,17 @@ class TeamController extends Controller
             'user_type_id'=>'required',
         ]);
         $user=auth()->user();   
-        $team_member=Team_member::where('user_id', $user->id)->orderBy('id', 'desc')->first();
-        $team_id=$team_member->team_id;
         $users = User::find($id);
         $team_members = new Team_member;
-        $team_members->team_id=$team_id;
+        $team=$user->teams()->first();
+        // dd($team);
+        if ($user->id==1) {
+            $team_members->team_id=$request->input('id');
+        } else {
+            $team_members->team_id=$team->id;
+        }
+        
+        
         $team_members->user_id=$users->id;
         $team_members->save();
         $users->user_type_id= $request->input('user_type_id');

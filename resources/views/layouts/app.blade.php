@@ -45,7 +45,7 @@
                         @endif
                         @if (auth()->user()->user_type_id==2)
                         <li class="nav-item"> 
-                            <a class="nav-link" href="{{ url('team/'.$user->id.'/edit') }}">{{ __('Create New Member') }}</a>   
+                            <a class="nav-link" href="{{ url('team') }}">{{ __('Create New Member') }}</a>   
                         </li>
                         @endif
                         @endauth
