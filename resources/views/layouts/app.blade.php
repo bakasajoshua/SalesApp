@@ -16,6 +16,26 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    {{-- custom style --}}
+    <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            </style>
+
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -42,10 +62,27 @@
                         <li class="nav-item"> 
                             <a class="nav-link" href="{{ url('team') }}">{{ __('Create New Member') }}</a>   
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('team/$user->id')}}">My team</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ url('sales/create')}}">Post Sale</a>
+                        </li>
                         @endif
                         @if (auth()->user()->user_type_id==2)
                         <li class="nav-item"> 
                             <a class="nav-link" href="{{ url('team') }}">{{ __('Create New Member') }}</a>   
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('team/$user->id')}}">My team</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ url('sales/create')}}">Post Sale</a>
+                        </li>
+                        @endif
+                        @if (auth()->user()->user_type_id==3)
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ url('sales/create')}}">Post Sale</a>
                         </li>
                         @endif
                         @endauth

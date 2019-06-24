@@ -380,6 +380,8 @@ class ComposerStaticInit784f25002adafea60842284cc774edf2
     );
 
     public static $classMap = array (
+        'App\\Commission' => __DIR__ . '/../..' . '/app/Commission.php',
+        'App\\CommissionRate' => __DIR__ . '/../..' . '/app/CommissionRate.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -389,6 +391,7 @@ class ComposerStaticInit784f25002adafea60842284cc774edf2
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\TeamController' => __DIR__ . '/../..' . '/app/Http/Controllers/TeamController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -402,6 +405,7 @@ class ComposerStaticInit784f25002adafea60842284cc774edf2
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Sale' => __DIR__ . '/../..' . '/app/Sale.php',
         'App\\Team' => __DIR__ . '/../..' . '/app/Team.php',
         'App\\Team_member' => __DIR__ . '/../..' . '/app/Team_member.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',

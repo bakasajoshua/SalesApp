@@ -48,6 +48,19 @@ class UsersTableSeeder extends Seeder
         factory(App\Usertype::Class, 1)->create([
         	'user_type' => 'Sales Rep',
         ]);
+
+        factory(App\COmmissionRate::Class, 1)->create([
+        	'user_type_id' => 1,
+        	'rate' => 2/100,
+        ]);
+        factory(App\COmmissionRate::Class, 1)->create([
+        	'user_type_id' => 2,
+        	'rate' => 5/100,
+        ]);
+        factory(App\COmmissionRate::Class, 1)->create([
+        	'user_type_id' => 3,
+        	'rate' => 10/100, 
+        ]);
     }
     
 }
