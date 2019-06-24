@@ -15,7 +15,7 @@ class TeamController extends Controller
      */
     public function index()
     {
-        $user=auth()-user();
+        $user=auth()->user();
         $users=User::whereNull('user_type_id')->get();
         return view('team/index', compact('user', 'users'));
         
