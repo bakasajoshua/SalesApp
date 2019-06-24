@@ -23,4 +23,6 @@ Route::get('profile', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('team', 'TeamController');
+Route::resource('sales', 'SalesController');
+
 

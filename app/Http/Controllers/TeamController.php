@@ -15,9 +15,9 @@ class TeamController extends Controller
      */
     public function index()
     {
-        
+        $user=auth()-user();
         $users=User::whereNull('user_type_id')->get();
-        return view('team/index')->with('users', $users);
+        return view('team/index', compact('user', 'users'));
         
     }
 
@@ -65,7 +65,14 @@ class TeamController extends Controller
      */
     public function show($id)
     {
-        //
+        $user=auth()->user();
+        // $parents=$user->children->name;
+        // $sales=Sales::all();
+        // $commission=Commission::all();
+        
+        return view('team.show', compact('user'))
+        // ->with('user', $user)->with('users', $users)
+        ;
     }
 
     /**
