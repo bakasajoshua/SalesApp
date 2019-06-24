@@ -16,9 +16,9 @@ class CreateCommissionRatesTable extends Migration
         Schema::create('commission_rates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_type_id');
-            $table->integer('rate');
+            $table->double('rate');
             $table->timestamps();
-            $table->sotDelete()->nullable();
+            $table->softDeletes()->nullable();
         });
     }
 
