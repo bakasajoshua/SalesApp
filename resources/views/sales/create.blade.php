@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="sales" class="col-md-4 col-form-label text-md-right">{{ __('Team Name') }}</label>
+                            <label for="sales" class="col-md-4 col-form-label text-md-right">{{ __('Product details') }}</label>
 
                             <div class="col-md-6">
                                 <input id="product" type="text"  name="product">
@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="form-group row">
-                                <label for="sales" class="col-md-4 col-form-label text-md-right">{{ __('Team Name') }}</label>
+                                <label for="sales" class="col-md-4 col-form-label text-md-right">{{ __('Price') }}</label>
     
                                 <div class="col-md-6">
                                     <input id="price" type="text"  name="price">

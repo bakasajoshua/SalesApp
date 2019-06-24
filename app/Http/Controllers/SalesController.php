@@ -23,7 +23,7 @@ class SalesController extends Controller
      */
     public function create()
     {
-        return view('team/create');
+        return view('sales/create');
     }
 
     /**
